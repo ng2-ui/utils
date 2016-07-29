@@ -6,4 +6,3 @@ function outerWidth(el) {
         parseInt(style.marginRight);
 }
 exports.outerWidth = outerWidth;
-//# sourceMappingURL=outer-width.js.map
