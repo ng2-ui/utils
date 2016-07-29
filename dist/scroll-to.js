@@ -33,3 +33,4 @@ function scrollTo(selector, parentSelector) {
     }(10));
 }
 exports.scrollTo = scrollTo;
+//# sourceMappingURL=scroll-to.js.map

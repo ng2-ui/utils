@@ -36,3 +36,4 @@ function computedStyle(el, styleProp) {
     }
 }
 exports.computedStyle = computedStyle;
+//# sourceMappingURL=computed-style.js.map

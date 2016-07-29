@@ -9,3 +9,4 @@ var outer_width_1 = require('./outer-width');
 exports.outerWidth = outer_width_1.outerWidth;
 var outer_height_1 = require('./outer-height');
 exports.outerHeight = outer_height_1.outerHeight;
+//# sourceMappingURL=index.js.map

@@ -45,3 +45,4 @@ function elementVisible(innerEl, outerEl, adjustment) {
     }
 }
 exports.elementVisible = elementVisible;
+//# sourceMappingURL=element-visible.js.map
