@@ -5,7 +5,7 @@
   "license": "MIT",
   "main": "dist/index.js",
   "scripts": {
-    "build": "./build.sh"
+    "build": "rimraf dist && ng2inline \"src/**/*.ts\" && tsc --rootDir dist"
   },
   "dependencies": {
     "@angular/common": "2.0.0-rc.3",
@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "ng2-inline-template": "^0.1.1",
+    "rimraf": "^2.5.4",
     "typescript": "^1.8.10",
     "typings": "^1.0.4"
   },
