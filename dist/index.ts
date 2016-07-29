@@ -1,3 +1,3 @@
 export { scrollTo } from './scroll-to';
-export { isElementVisible } from './is-element-visible';
+export { isElementVisible } from './element-visible';
 export { computedStyle } from './computed-style';
