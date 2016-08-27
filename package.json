@@ -1,11 +1,12 @@
 {
   "name": "ng2-utils",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "ng2-ui utility functions",
   "license": "MIT",
   "main": "dist/index.js",
   "scripts": {
-    "build": "rimraf dist && ng2inline \"src/**/*.ts\" && tsc --rootDir dist"
+    "build": "rimraf dist && ng2inline \"src/**/*.ts\" && tsc --rootDir dist",
+    "start": "http-server -o -p 9012"
   },
   "dependencies": {
     "@angular/common": "2.0.0-rc.5",
