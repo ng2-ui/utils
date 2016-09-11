@@ -1,8 +1,10 @@
 import {Component, ViewContainerRef} from '@angular/core'
+
+//noinspection TypeScriptCheckImport
 import {
   elementVisible,
   computedStyle,
-  scrollTo,
+  // scrollTo,
   outerHeight,
   outerWidth
 } from 'ng2-utils';
