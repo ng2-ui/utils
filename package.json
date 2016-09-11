@@ -1,9 +1,9 @@
 {
   "name": "ng2-utils",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "ng2-ui utility functions",
   "license": "MIT",
-  "main": "dist/ng2-XXXXXXX.umd.js",
+  "main": "dist/ng2-utils.umd.js",
   "typings": "dist/index.d.ts",
   "scripts": {
     "start": "http-server -o",
@@ -39,11 +39,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jsvalley/ng2-utils.git"
+    "url": "git+https://github.com/ng2-ui/ng2-utils.git"
   },
   "author": "Allen Kim <allenhwkim@gmail.com>",
   "bugs": {
-    "url": "https://github.com/jsvalley/ng2-utils/issues"
+    "url": "https://github.com/ng2-ui/ng2-utils/issues"
   },
-  "homepage": "https://github.com/jsvalley/ng2-utils#readme"
+  "homepage": "https://github.com/ng2-ui/ng2-utils#readme"
 }
