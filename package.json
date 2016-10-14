@@ -1,9 +1,10 @@
 {
   "name": "ng2-utils",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "ng2-ui utility functions",
   "license": "MIT",
   "main": "dist/ng2-utils.umd.js",
+  "typings": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
     "start": "http-server -o",
