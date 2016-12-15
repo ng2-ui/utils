@@ -1,8 +1,9 @@
-import { scrollTo } from './scroll-to';
-import { elementVisible } from './element-visible';
-import { computedStyle } from './computed-style';
-import { outerWidth } from './outer-width';
-import { outerHeight } from './outer-height';
-export { scrollTo, elementVisible, computedStyle, outerWidth, outerHeight };
-export declare class Ng2UtilsModule {
-}
+import { scrollTo } from './dom-functions/scroll-to';
+import { elementVisible } from './dom-functions/element-visible';
+import { computedStyle } from './dom-functions/computed-style';
+import { outerWidth } from './dom-functions/outer-width';
+import { outerHeight } from './dom-functions/outer-height';
+import { HtmlCodePipe } from './pipes/html-code.pipe';
+import { JavascriptCodePipe } from './pipes/javascript-code.pipe';
+import { Ng2UtilsModule } from './ng2-utils.module';
+export { scrollTo, elementVisible, computedStyle, outerWidth, outerHeight, HtmlCodePipe, JavascriptCodePipe, Ng2UtilsModule };
