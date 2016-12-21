@@ -12,11 +12,12 @@ export function elementVisible(
 ) : {top: boolean, bottom: boolean, left: boolean, right: boolean} {
 
   let innerEl: HTMLElement;
-  (typeof innerElement === 'string') ?
-    (innerEl = <HTMLElement>document.querySelector(<string>innerElement)) : innerElement;
   let outerEl: HTMLElement| Window;
-  (typeof outerElement === 'string') ?
-    (outerEl = <HTMLElement|Window>document.querySelector(<string>outerElement)) : outerElement;
+  
+  innerEl = (typeof innerElement === 'string') ?
+    (<HTMLElement>document.querySelector(<string>innerElement)) : innerElement;
+  outerEl = (typeof outerElement === 'string') ?
+    (<HTMLElement|Window>document.querySelector(<string>outerElement)) : outerElement;
 
   let innerRect = innerEl.getBoundingClientRect();
   let bottomAdjustment = (adjustment && adjustment.bottom || 0);
