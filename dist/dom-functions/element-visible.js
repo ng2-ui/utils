@@ -8,11 +8,11 @@
  */
 function elementVisible(innerElement, outerElement, adjustment) {
     var innerEl;
-    (typeof innerElement === 'string') ?
-        (innerEl = document.querySelector(innerElement)) : innerElement;
     var outerEl;
-    (typeof outerElement === 'string') ?
-        (outerEl = document.querySelector(outerElement)) : outerElement;
+    innerEl = (typeof innerElement === 'string') ?
+        document.querySelector(innerElement) : innerElement;
+    outerEl = (typeof outerElement === 'string') ?
+        document.querySelector(outerElement) : outerElement;
     var innerRect = innerEl.getBoundingClientRect();
     var bottomAdjustment = (adjustment && adjustment.bottom || 0);
     if (outerEl === window) {

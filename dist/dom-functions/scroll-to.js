@@ -4,8 +4,10 @@
  * @param selector
  * @param parentSelector
  */
-function scrollTo(selector, parentSelector) {
+function scrollTo(selector, parentSelector, horizontal, distance) {
+    // argument validation
     var parentEl, targetEl;
+    parentSelector = parentSelector || 'body';
     targetEl = document.querySelector(selector);
     if (!targetEl) {
         throw "Invalid selector " + selector;
@@ -14,22 +16,39 @@ function scrollTo(selector, parentSelector) {
     if (!parentEl) {
         throw "Invalid parent selector " + parentSelector;
     }
+    // detect the current environment
     var parentElStyle = window.getComputedStyle(parentEl);
-    parentEl = parentElStyle['overflow'] === 'auto' ? parentEl : document.body;
-    var currentScrollTop = parentEl.scrollTop;
-    var targetOffsetTop = targetEl.offsetTop;
-    if (parentEl === document.body) {
+    var scrollContainerEl = parentElStyle.overflow === 'auto' ? parentEl : document.body;
+    var currentScrollTop = scrollContainerEl.scrollTop;
+    var currentScrollLeft = scrollContainerEl.scrollLeft;
+    // determine targetOffsetTop(or Left);
+    var targetOffsetTop;
+    var targetOffsetLeft;
+    if (scrollContainerEl === document.body) {
         var bodyRect = document.body.getBoundingClientRect();
         var targetRect = targetEl.getBoundingClientRect();
         targetOffsetTop = targetRect.top - bodyRect.top;
+        targetOffsetLeft = targetRect.left - bodyRect.left;
     }
-    var step = Math.ceil((targetOffsetTop - currentScrollTop) / 10);
-    (function loop(i) {
+    else {
+        targetOffsetTop = targetEl.offsetTop;
+        targetOffsetLeft = targetEl.offsetLeft;
+    }
+    if (distance) {
+        currentScrollTop += distance;
+        currentScrollLeft += distance;
+    }
+    // start scrolling
+    var step = horizontal ?
+        Math.ceil((targetOffsetLeft - currentScrollLeft) / 10) :
+        Math.ceil((targetOffsetTop - currentScrollTop) / 10);
+    var scrollProp = horizontal ? 'scrollLeft' : 'scrollTop';
+    (function loop(i, prop) {
         setTimeout(function main() {
-            parentEl.scrollTop += step;
-            i > 1 && loop(i - 1);
+            scrollContainerEl[prop] += step;
+            i > 1 && loop(i - 1, prop);
         }, 50);
-    }(10));
+    }(10, scrollProp));
 }
 exports.scrollTo = scrollTo;
 //# sourceMappingURL=scroll-to.js.map

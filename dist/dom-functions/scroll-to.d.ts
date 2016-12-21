@@ -3,4 +3,4 @@
  * @param selector
  * @param parentSelector
  */
-export declare function scrollTo(selector: string, parentSelector: string): void;
+export declare function scrollTo(selector: string, parentSelector?: string, horizontal?: boolean, distance?: number): void;
