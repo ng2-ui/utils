@@ -10,7 +10,31 @@ NG2-UI utility functions
 
 ## Use it in your code
 
-        import { computedStyle, isElementVisible, scrollTo } from 'ng2-utils/dist';
+App Component
+
+        import { Ng2UtilsModule } from 'ng2-utils';
+
+        import { AppComponent }   from './app.component';
+
+        @NgModule({
+          imports: [BrowserModule, Ng2UtilsModule],
+          declarations: [AppComponent],
+          bootstrap: [ AppComponent ]
+        })
+        export class AppModule { }
+
+        platformBrowserDynamic().bootstrapModule(AppModule);
+
+Javascript
+
+        import { elementVisible, computedStyle, scrollTo, outerHeight, outerWidth } from 'ng2-utils';
+        
+HTML
+
+        {{myHtml | htmlCode}}
+        {{myHtml | htmlCode:'include'}}
+        {{myHtml | htmlCode:'-include'}}
+        {{ngOnInit | jsCode}}
         
 ## DOM-related functions
 
