@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var html_code_pipe_1 = require("./pipes/html-code.pipe");
 var javascript_code_pipe_1 = require("./pipes/javascript-code.pipe");
+var ng2_utils_directive_1 = require("./directives/ng2-utils.directive");
 var Ng2UtilsModule = (function () {
     function Ng2UtilsModule() {
     }
@@ -20,11 +21,13 @@ Ng2UtilsModule = __decorate([
     core_1.NgModule({
         declarations: [
             html_code_pipe_1.HtmlCodePipe,
-            javascript_code_pipe_1.JavascriptCodePipe
+            javascript_code_pipe_1.JavascriptCodePipe,
+            ng2_utils_directive_1.Ng2UtilsDirective
         ],
         exports: [
             html_code_pipe_1.HtmlCodePipe,
-            javascript_code_pipe_1.JavascriptCodePipe
+            javascript_code_pipe_1.JavascriptCodePipe,
+            ng2_utils_directive_1.Ng2UtilsDirective
         ]
     }),
     __metadata("design:paramtypes", [])

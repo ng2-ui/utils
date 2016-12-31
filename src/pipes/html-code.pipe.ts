@@ -18,7 +18,6 @@ export class HtmlCodePipe implements PipeTransform {
 
     ret = tagsInclude.length > 0 ? '' : html;
 
-    console.log('tagsInclude.length', tagsInclude.length, tagsInclude);
     if (tagsInclude.length > 0) {
       tagsInclude.forEach(tag => {
         let regEx = new RegExp(`<${tag}>([\\s\\S]*?)<\/${tag}>`);
