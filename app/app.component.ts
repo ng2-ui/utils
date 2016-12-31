@@ -54,6 +54,14 @@ import {
       
     </fieldset>
       
+    <fieldset>
+      <legend>Directives</legend>
+      <ng2-utils-1> 1 </ng2-utils-1>
+      <ng2-utils-2> 2 </ng2-utils-2>
+      <ng2-utils-3> 3 </ng2-utils-3>
+      <ng2-utils-4> 4 </ng2-utils-4>
+      <ng2-utils-5> 5 </ng2-utils-5>
+    </fieldset>
   `
 })
 export class AppComponent {

@@ -8,15 +8,18 @@ import { outerHeight } from './dom-functions/outer-height';
 
 import { HtmlCodePipe } from './pipes/html-code.pipe';
 import { JavascriptCodePipe } from './pipes/javascript-code.pipe';
+import { Ng2UtilsDirective } from "./directives/ng2-utils.directive";
 
 @NgModule({
   declarations: [
     HtmlCodePipe,
-    JavascriptCodePipe
+    JavascriptCodePipe,
+    Ng2UtilsDirective
   ],
   exports: [
     HtmlCodePipe,
-    JavascriptCodePipe
+    JavascriptCodePipe,
+    Ng2UtilsDirective
   ]
 })
 export class Ng2UtilsModule {}
