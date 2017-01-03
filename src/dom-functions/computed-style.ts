@@ -6,7 +6,7 @@
  */
 export function computedStyle(element: string | HTMLElement, styleProp: string): string {
   let el: HTMLElement;
-  (typeof element === 'string') ? (el = <HTMLElement>document.querySelector(<string>element)) : element;
+  el =  (typeof element === 'string') ? (<HTMLElement>document.querySelector(<string>element)) : element;
 
   var value: any, defaultView: any = (el.ownerDocument || document).defaultView;
   // W3C standard way:
