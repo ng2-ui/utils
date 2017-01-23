@@ -204,7 +204,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 */
 	function computedStyle(element, styleProp) {
 	    var el;
-	    (typeof element === 'string') ? (el = document.querySelector(element)) : element;
+	    el = (typeof element === 'string') ? document.querySelector(element) : element;
 	    var value, defaultView = (el.ownerDocument || document).defaultView;
 	    // W3C standard way:
 	    if (defaultView && defaultView.getComputedStyle) {
@@ -305,7 +305,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	            tagsInclude.forEach(function (tag) {
 	                var regEx = new RegExp("<" + tag + ">([\\s\\S]*?)</" + tag + ">");
 	                var matches = html.match(regEx);
-	                ret = ret + matches[0];
+	                var output = matches[0].replace(/<\/?ng2-utils-[0-9]+>\s*/g, ''); //remove <ng2-utils-xxx> and </ng2-utils-xxx>
+	                ret = ret + output;
 	            });
 	        }
 	        if (tagsExclude.length > 0) {

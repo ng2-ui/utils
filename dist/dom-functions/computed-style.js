@@ -7,7 +7,7 @@
  */
 function computedStyle(element, styleProp) {
     var el;
-    (typeof element === 'string') ? (el = document.querySelector(element)) : element;
+    el = (typeof element === 'string') ? document.querySelector(element) : element;
     var value, defaultView = (el.ownerDocument || document).defaultView;
     // W3C standard way:
     if (defaultView && defaultView.getComputedStyle) {
