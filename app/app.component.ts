@@ -43,6 +43,7 @@ import {
         myHtml: {{myHtml}}
         <div id="pie1">myHtml | htmlCode: <pre>{{myHtml | htmlCode}}</pre></div>
         <div id="pie2">myHtml | htmlCode:'include' : <pre>{{myHtml | htmlCode:'include'}}</pre></div>
+        <div id="pie2">myHtml | htmlCode:'ng2-utils-11' : <pre>{{myHtml | htmlCode:'ng2-utils-11'}}</pre></div>
         <div id="pie3">myHtml | htmlCode:'-include' <pre>{{myHtml | htmlCode:'-include'}}</pre></div>
       </fieldset>
       
@@ -71,7 +72,13 @@ export class AppComponent {
   computedStyle: any = computedStyle;
   outerHeight: any = outerHeight;
   outerWidth: any = outerWidth;
-  myHtml = '<include>I</include><exclude>E</exclude>';
+  myHtml = `
+    <include>I</include>
+    <ng2-utils-11>
+    ng2-utils-11
+    </ng2-utils-11>
+    <exclude>E</exclude>
+  `;
 
   scrollToResult: boolean;
 

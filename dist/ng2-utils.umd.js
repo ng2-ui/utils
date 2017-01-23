@@ -301,7 +301,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	            }
 	        });
 	        ret = tagsInclude.length > 0 ? '' : html;
-	        console.log('tagsInclude.length', tagsInclude.length, tagsInclude);
 	        if (tagsInclude.length > 0) {
 	            tagsInclude.forEach(function (tag) {
 	                var regEx = new RegExp("<" + tag + ">([\\s\\S]*?)</" + tag + ">");
