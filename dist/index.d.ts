@@ -5,5 +5,5 @@ import { outerWidth } from './dom-functions/outer-width';
 import { outerHeight } from './dom-functions/outer-height';
 import { HtmlCodePipe } from './pipes/html-code.pipe';
 import { JavascriptCodePipe } from './pipes/javascript-code.pipe';
-import { Ng2UtilsModule } from './ng2-utils.module';
-export { scrollTo, elementVisible, computedStyle, outerWidth, outerHeight, HtmlCodePipe, JavascriptCodePipe, Ng2UtilsModule };
+import { NguiUtilsModule } from './utils.module';
+export { scrollTo, elementVisible, computedStyle, outerWidth, outerHeight, HtmlCodePipe, JavascriptCodePipe, NguiUtilsModule };

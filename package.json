@@ -1,9 +1,9 @@
 {
-  "name": "ng2-utils",
-  "version": "0.6.1",
-  "description": "ng2-ui utility functions",
+  "name": "@ngui/utils",
+  "version": "0.7.0",
+  "description": "Angular2 utility functions",
   "license": "MIT",
-  "main": "dist/ng2-utils.umd.js",
+  "main": "dist/utils.umd.js",
   "module": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
@@ -49,11 +49,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ng2-ui/ng2-utils.git"
+    "url": "git+https://github.com/ng2-ui/utils.git"
   },
   "author": "Allen Kim <allenhwkim@gmail.com>",
   "bugs": {
-    "url": "https://github.com/ng2-ui/ng2-utils/issues"
+    "url": "https://github.com/ng2-ui/utils/issues"
   },
-  "homepage": "https://github.com/ng2-ui/ng2-utils#readme"
+  "homepage": "https://github.com/ng2-ui/utils#readme"
 }

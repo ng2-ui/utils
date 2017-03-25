@@ -30,7 +30,7 @@ var HtmlCodePipe = (function () {
             tagsInclude.forEach(function (tag) {
                 var regEx = new RegExp("<" + tag + ">([\\s\\S]*?)</" + tag + ">");
                 var matches = html.match(regEx);
-                var output = matches[0].replace(/<\/?ng2-utils-[0-9]+>\s*/g, ''); //remove <ng2-utils-xxx> and </ng2-utils-xxx>
+                var output = matches[0].replace(/<\/?ngui-utils-[0-9]+>\s*/g, ''); //remove <ngui-utils-xxx> and </ngui-utils-xxx>
                 ret = ret + output;
             });
         }

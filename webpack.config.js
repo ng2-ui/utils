@@ -3,7 +3,7 @@ var webpack = require('webpack');
 
 module.exports = {
   entry: {
-    'ng2-utils': path.join(__dirname, 'src', 'index.ts')
+    '@ngui/utils': path.join(__dirname, 'src', 'index.ts')
   },
   resolve: {
     extensions: ['', '.ts', '.js', '.json', '.css', '.html']

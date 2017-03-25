@@ -1,23 +1,23 @@
-# ng2-utils
+# Angular 2 UI Utility Functoins
 
-NG2-UI utility functions
+utility functions
 
 ## Install
 
-1. install ng2-utils
+1. install @ngui/utils
 
-        $ npm install ng2-utils --save
+        $ npm install @ngui/utils --save
 
 ## Use it in your code
 
 App Component
 
-        import { Ng2UtilsModule } from 'ng2-utils';
+        import { NguiUtilsModule } from '@ngui/utils';
 
         import { AppComponent }   from './app.component';
 
         @NgModule({
-          imports: [BrowserModule, Ng2UtilsModule],
+          imports: [BrowserModule, NguiUtilsModule],
           declarations: [AppComponent],
           bootstrap: [ AppComponent ]
         })
@@ -27,7 +27,7 @@ App Component
 
 Javascript
 
-        import { elementVisible, computedStyle, scrollTo, outerHeight, outerWidth } from 'ng2-utils';
+        import { elementVisible, computedStyle, scrollTo, outerHeight, outerWidth } from '@ngui/utils';
         
 HTML
 

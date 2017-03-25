@@ -7,7 +7,7 @@ import { outerHeight } from './dom-functions/outer-height';
 import { HtmlCodePipe } from './pipes/html-code.pipe';
 import { JavascriptCodePipe } from './pipes/javascript-code.pipe';
 
-import { Ng2UtilsModule } from './ng2-utils.module';
+import { NguiUtilsModule } from './utils.module';
 
 export {
   scrollTo,
@@ -17,6 +17,6 @@ export {
   outerHeight,
   HtmlCodePipe,
   JavascriptCodePipe,
-  Ng2UtilsModule
+  NguiUtilsModule
 };
 

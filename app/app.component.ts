@@ -7,7 +7,7 @@ import {
   scrollTo,
   outerHeight,
   outerWidth
-} from 'ng2-utils';
+} from '@ngui/utils';
 
 @Component({
   selector: 'my-app',
@@ -43,7 +43,7 @@ import {
         myHtml: {{myHtml}}
         <div id="pie1">myHtml | htmlCode: <pre>{{myHtml | htmlCode}}</pre></div>
         <div id="pie2">myHtml | htmlCode:'include' : <pre>{{myHtml | htmlCode:'include'}}</pre></div>
-        <div id="pie2">myHtml | htmlCode:'ng2-utils-11' : <pre>{{myHtml | htmlCode:'ng2-utils-11'}}</pre></div>
+        <div id="pie2">myHtml | htmlCode:'ngui-utils-11' : <pre>{{myHtml | htmlCode:'ngui-utils-11'}}</pre></div>
         <div id="pie3">myHtml | htmlCode:'-include' <pre>{{myHtml | htmlCode:'-include'}}</pre></div>
       </fieldset>
       
@@ -57,11 +57,11 @@ import {
       
     <fieldset>
       <legend>Directives</legend>
-      <ng2-utils-1> 1 </ng2-utils-1>
-      <ng2-utils-2> 2 </ng2-utils-2>
-      <ng2-utils-3> 3 </ng2-utils-3>
-      <ng2-utils-4> 4 </ng2-utils-4>
-      <ng2-utils-5> 5 </ng2-utils-5>
+      <ngui-utils-1> 1 </ngui-utils-1>
+      <ngui-utils-2> 2 </ngui-utils-2>
+      <ngui-utils-3> 3 </ngui-utils-3>
+      <ngui-utils-4> 4 </ngui-utils-4>
+      <ngui-utils-5> 5 </ngui-utils-5>
     </fieldset>
   `
 })
@@ -74,9 +74,9 @@ export class AppComponent {
   outerWidth: any = outerWidth;
   myHtml = `
     <include>I</include>
-    <ng2-utils-11>
-    ng2-utils-11
-    </ng2-utils-11>
+    <ngui-utils-11>
+    ngui-utils-11
+    </ngui-utils-11>
     <exclude>E</exclude>
   `;
 

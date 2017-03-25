@@ -22,7 +22,7 @@
     "outDir": "dist",
     "baseUrl": "src",
     "paths": {
-      "ng2-utils": ["./index"]
+      "@ngui/utils": ["./index"]
     }
   },
   "files": [

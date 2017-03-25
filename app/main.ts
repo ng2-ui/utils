@@ -8,12 +8,12 @@ import { NgModule }       from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 //noinspection TypeScriptCheckImport
-import { Ng2UtilsModule } from 'ng2-utils';
+import { NguiUtilsModule } from '@ngui/utils';
 
 import { AppComponent }   from './app.component';
 
 @NgModule({
-  imports: [BrowserModule, Ng2UtilsModule],
+  imports: [BrowserModule, NguiUtilsModule],
   declarations: [AppComponent],
   bootstrap: [ AppComponent ]
 })

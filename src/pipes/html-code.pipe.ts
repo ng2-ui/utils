@@ -22,7 +22,7 @@ export class HtmlCodePipe implements PipeTransform {
       tagsInclude.forEach(tag => {
         let regEx = new RegExp(`<${tag}>([\\s\\S]*?)<\/${tag}>`);
         let matches = html.match(regEx);
-        let output = matches[0].replace(/<\/?ng2-utils-[0-9]+>\s*/g, ''); //remove <ng2-utils-xxx> and </ng2-utils-xxx>
+        let output = matches[0].replace(/<\/?ngui-utils-[0-9]+>\s*/g, ''); //remove <ngui-utils-xxx> and </ngui-utils-xxx>
         ret = ret + output;
       });
     }
