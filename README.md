@@ -2,6 +2,15 @@
 
 utility functions
 
+## IMPORTANT NOTICE
+
+After 0.7.0 or higher, `ng2-utils` has been changed to `@ngui/utils` 
+like the same Angular version is more than 2. Here are the changes;
+
+* Module name `ng2-utils` has been changed to `@ngui/utils`.
+* Direvtive name `ng2-utils-X` is moved to `ngui-utils-X`. e.g., ngui-utils-1  
+* Class name `Ng2Util` is moved to `NguiUtils`.
+
 ## Install
 
 1. install @ngui/utils
@@ -16,8 +25,7 @@ App Component
 
         import { AppComponent }   from './app.component';
 
-        @NgModule({
-          imports: [BrowserModule, NguiUtilsModule],
+        @NgModule({    imports: [BrowserModule, NguiUtilsModule],
           declarations: [AppComponent],
           bootstrap: [ AppComponent ]
         })
