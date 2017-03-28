@@ -6,7 +6,9 @@ import {
   computedStyle,
   scrollTo,
   outerHeight,
-  outerWidth
+  outerWidth,
+  MemoryStorage,
+  Storage
 } from '@ngui/utils';
 
 @Component({
@@ -63,6 +65,14 @@ import {
       <ngui-utils-4> 4 </ngui-utils-4>
       <ngui-utils-5> 5 </ngui-utils-5>
     </fieldset>
+
+    <fieldset>
+      <legend>Services</legend>
+      <h3>Storage</h3>
+      {{this.storageValue}}
+      <h3>MemoryStorage</h3>
+      {{this.memStorageValue}}
+    </fieldset>
   `
 })
 export class AppComponent {
@@ -81,6 +91,16 @@ export class AppComponent {
   `;
 
   scrollToResult: boolean;
+
+  storageValue: string;
+  memStorageValue: string;
+
+  constructor(storage: Storage, memoryStorage: MemoryStorage) {
+    storage.setItem('foo', 'key: foo, value: "storage value"');
+    memoryStorage.setItem('foo', 'key: foo, value: "memory storage value"');
+    this.storageValue = storage.getItem('foo');
+    this.memStorageValue = memoryStorage.getItem('foo');
+  }
 
   ngOnInit() {
     scrollTo('#hello', 'body');

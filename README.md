@@ -63,13 +63,25 @@ HTML
     * scrolls to a certain section in a second
     * returns void
 
-## pipes
+## Pipes
 
   * string | htmlCode:'include,-exclude'
     * returns html string with tags included and excluded 
     
   * string | jsCode
     * returns beautified Javascript code
-  
 
+## Services
+
+    * MemoryStorage
+      memory storage without using localStorage or sessionStorage with following functions
+        * getItem(key: string) : returns string value of stored value
+        * setItem(key: string, value: string): store value of key into memory
+        * clear(): reset memory storage
+
+    * Storage
+      session storage using sessionStorage with fallback to MemoryStorage with following functions
+        * getItem(key: string) : returns string value of stored value
+        * setItem(key: string, value: string): store value of key into memory
+        * clear(): reset storage
 

@@ -1,22 +1,17 @@
-import { scrollTo } from './dom-functions/scroll-to';
-import { elementVisible } from './dom-functions/element-visible';
-import { computedStyle } from './dom-functions/computed-style';
-import { outerWidth } from './dom-functions/outer-width';
-import { outerHeight } from './dom-functions/outer-height';
+/* dom functions */
+export { scrollTo } from './dom-functions/scroll-to';
+export { elementVisible } from './dom-functions/element-visible';
+export { computedStyle } from './dom-functions/computed-style';
+export { outerWidth } from './dom-functions/outer-width';
+export { outerHeight } from './dom-functions/outer-height';
 
-import { HtmlCodePipe } from './pipes/html-code.pipe';
-import { JavascriptCodePipe } from './pipes/javascript-code.pipe';
+/*  pipes */
+export { HtmlCodePipe } from './pipes/html-code.pipe';
+export { JavascriptCodePipe } from './pipes/javascript-code.pipe';
 
-import { NguiUtilsModule } from './utils.module';
+/* services */
+export { MemoryStorage } from './services/memory-storage';
+export { Storage } from './services/storage';
 
-export {
-  scrollTo,
-  elementVisible,
-  computedStyle,
-  outerWidth,
-  outerHeight,
-  HtmlCodePipe,
-  JavascriptCodePipe,
-  NguiUtilsModule
-};
-
+/* module */
+export { NguiUtilsModule } from './utils.module';

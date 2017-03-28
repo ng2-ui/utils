@@ -10,7 +10,15 @@ import { HtmlCodePipe } from './pipes/html-code.pipe';
 import { JavascriptCodePipe } from './pipes/javascript-code.pipe';
 import { NguiUtilsDirective } from "./directives/utils.directive";
 
+/* services */
+import { MemoryStorage } from './services/memory-storage';
+import { Storage } from './services/storage';
+
 @NgModule({
+  providers: [
+    MemoryStorage,
+    Storage
+  ],
   declarations: [
     HtmlCodePipe,
     JavascriptCodePipe,

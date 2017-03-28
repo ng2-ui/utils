@@ -12,6 +12,9 @@ var core_1 = require("@angular/core");
 var html_code_pipe_1 = require("./pipes/html-code.pipe");
 var javascript_code_pipe_1 = require("./pipes/javascript-code.pipe");
 var utils_directive_1 = require("./directives/utils.directive");
+/* services */
+var memory_storage_1 = require("./services/memory-storage");
+var storage_1 = require("./services/storage");
 var NguiUtilsModule = (function () {
     function NguiUtilsModule() {
     }
@@ -19,6 +22,10 @@ var NguiUtilsModule = (function () {
 }());
 NguiUtilsModule = __decorate([
     core_1.NgModule({
+        providers: [
+            memory_storage_1.MemoryStorage,
+            storage_1.Storage
+        ],
         declarations: [
             html_code_pipe_1.HtmlCodePipe,
             javascript_code_pipe_1.JavascriptCodePipe,
