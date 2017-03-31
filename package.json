@@ -1,6 +1,6 @@
 {
   "name": "@ngui/utils",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "Angular2 utility functions",
   "license": "MIT",
   "main": "dist/utils.umd.js",
