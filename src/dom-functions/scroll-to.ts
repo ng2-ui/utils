@@ -49,7 +49,6 @@ export function scrollTo(
     currentScrollLeft += distance;
   }
 
-
   // start scrolling
   let step = horizontal ?
     Math.ceil((targetOffsetLeft - currentScrollLeft) / 10) :
@@ -58,9 +57,12 @@ export function scrollTo(
   (function loop(i: number, prop: any): void {
     setTimeout(function main() {
       scrollContainerEl[prop] += step;
-      i > 1 && loop(i - 1, prop);
+      if (i > 1) {
+        loop(i - 1, prop);
+      } else {  //the last step
+        scrollContainerEl[prop] = horizontal ? targetOffsetLeft : targetOffsetTop;
+      }
     }, 50);
   }(10, scrollProp));
-
 }
 
